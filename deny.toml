@@ -1,0 +1,35 @@
+[graph]
+targets = [
+    "x86_64-unknown-linux-gnu",
+    "aarch64-unknown-linux-gnu",
+    "x86_64-apple-darwin",
+    "aarch64-apple-darwin",
+]
+all-features = true
+
+[advisories]
+unmaintained = "workspace"
+unsound = "all"
+ignore = []
+
+[licenses]
+confidence-threshold = 0.93
+allow = [
+    "Apache-2.0",
+    "MIT",
+    "Unicode-3.0",
+]
+exceptions = []
+
+[bans]
+multiple-versions = "warn"
+wildcards = "deny"
+deny = []
+skip = []
+skip-tree = []
+
+[sources]
+unknown-registry = "deny"
+unknown-git = "deny"
+allow-registry = ["https://github.com/rust-lang/crates.io-index"]
+allow-git = []
